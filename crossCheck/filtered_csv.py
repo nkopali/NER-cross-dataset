@@ -3,8 +3,8 @@ import ast
 from decompose import decompose
 
 # Load the CSV files
-train_df = pd.read_csv('csv/train_ncbi_gold.csv')
-dev_df = pd.read_csv('csv/dev_ncbi.csv')
+train_df = pd.read_csv('csv/train_ncbi_gold.csv') # The train dataset
+dev_df = pd.read_csv('csv/dev_ncbi.csv') # The dataset we want to filter
 
 print("Train", train_df.shape)
 print("Dev", dev_df.shape)

@@ -18,9 +18,8 @@ def decompose(filepath):
         tags_list = row["Tags"]
         for word, label in tags_list:
             all_tags_content += f"{word}\t{label}\n"
-        all_tags_content += "\n"  # Add a newline at the end of each row's content
+        all_tags_content += "\n"  
 
-    # Write the aggregated content to the file
     with open(output_file_path, "w") as file:
         file.write(all_tags_content)
 

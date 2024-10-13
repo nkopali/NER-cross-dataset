@@ -1,11 +1,9 @@
 import pandas as pd
 import ast
 
-gold_df = pd.read_csv('processed_data/filtered_dev_bc5_onncbi.csv')
-pred_df1 = pd.read_csv('processed_data/ncbitobc5-filtered-newdev.csv')
-# pred_df1 = pd.read_csv('csv/val_ncbi_pred_onncbi.csv')
-diff_sentences = []
-gold_sentences = []
+gold_df = pd.read_csv('processed_data/filtered_dev_bc5_onncbi.csv') # The ground truth
+pred_df1 = pd.read_csv('processed_data/ncbitobc5-filtered-newdev.csv') # Predictions
+
 diff_tags = []
 
 for index, gold_row  in gold_df.iterrows():
