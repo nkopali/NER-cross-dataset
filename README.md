@@ -17,7 +17,7 @@ This repository contains Python scripts for performing data preprocessing, analy
 - **Purpose**: Generates a LaTeX table from a CSV file, displaying sentences, gold-standard labels, and predicted labels for error analysis. The table is formatted using the `tabulate` library and is ready for LaTeX integration. To display a specific dataset, start by executing the `analysis_merged.py` script on it.
 
 ### 5. `pos_tagging.py`
-- **Purpose**: Applies part-of-speech (POS) tagging to sentences in a dataset using the Stanza and SpaCy NLP libraries. The tagged data is saved to a new CSV file for further analysis. To display a specific dataset, start by executing the `analysis_merged.py` script on it.
+- **Purpose**: Applies part-of-speech (POS) tagging to sentences in a dataset using the Stanza NLP libraries. The tagged data is saved to a new CSV file for further analysis. To display a specific dataset, start by executing the `analysis_merged.py` script on it.
 
 ### 6. `pos_tagging_freq.py`
 - **Purpose**: Calculates the frequency of POS tag patterns and saves the results as a LaTeX table. This provides insights into common patterns within the dataset, aiding in error analysis and reporting. To display the frequencies, start by executing the `pos_tagging.py` script on the dataset you wish to analyse.
@@ -30,4 +30,4 @@ This repository contains Python scripts for performing data preprocessing, analy
 
 ---
 
-Ensure that all dependencies, such as `pandas`, `ast`, `tabulate`, `stanza`, and `spacy`, are installed before running these scripts.
+Ensure that all dependencies, such as `pandas`, `ast`, `tabulate` and `stanza` are installed before running these scripts.

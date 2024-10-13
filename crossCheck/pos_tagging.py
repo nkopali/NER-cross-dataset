@@ -1,6 +1,5 @@
 import pandas as pd
 import stanza
-import spacy
 import ast
 
 data = pd.read_csv('processed_data/ncbitobc5LatexConsecutive.csv')
@@ -9,7 +8,6 @@ df = pd.DataFrame(data)
 
 stanza.download('en')
 nlp_stanza = stanza.Pipeline('en')
-nlp_spacy = spacy.load("en_core_web_sm")
 
 def pos_tagging_stanza(tags):
     pos_tags = []
@@ -17,13 +15,6 @@ def pos_tagging_stanza(tags):
         doc = nlp_stanza(tag)
         pos_tags.append([(word.text, word.upos) for sent in doc.sentences for word in sent.words])
     return pos_tags
-
-# def pos_tagging_spacy(tags):
-#     pos_tags = []
-#     for tag in tags:
-#         doc = nlp_spacy(tag)
-#         pos_tags.append([(token.text, token.pos_) for token in doc])
-#     return pos_tags
 
 df['Tags'] = df['Tags'].apply(ast.literal_eval)
 # df['Pred'] = df['Pred'].apply(ast.literal_eval)
