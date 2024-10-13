@@ -1,0 +1,20 @@
+\begin{longtable}{lr}
+\hline
+ Pattern   &   Frequency \\
+\hline
+\endhead
+ NOUN      &         346 \\
+ ADJ       &         115 \\
+ PROPN     &          70 \\
+ PUNCT     &          21 \\
+ VERB      &          20 \\
+ ADP       &           7 \\
+ ADV       &           7 \\
+ CCONJ     &           6 \\
+ DET       &           5 \\
+ INTJ      &           2 \\
+ SCONJ     &           2 \\
+ PART      &           1 \\
+ NUM       &           1 \\
+\hline
+\end{longtable}

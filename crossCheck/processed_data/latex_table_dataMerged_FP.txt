@@ -1,0 +1,17 @@
+\begin{longtable}{lr}
+\hline
+ Pattern   &   Frequency \\
+\hline
+\endhead
+ NOUN      &          52 \\
+ ADJ       &          24 \\
+ PROPN     &          19 \\
+ PUNCT     &           7 \\
+ VERB      &           3 \\
+ SYM       &           2 \\
+ NUM       &           2 \\
+ ADV       &           1 \\
+ INTJ      &           1 \\
+ CCONJ     &           1 \\
+\hline
+\end{longtable}

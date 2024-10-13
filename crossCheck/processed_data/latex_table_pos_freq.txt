@@ -1,0 +1,34 @@
+\begin{longtable}{lr}
+\hline
+ Pattern                  &   Frequency \\
+\hline
+\endhead
+ NOUN                     &          29 \\
+ PROPN                    &          24 \\
+ ADJ NOUN                 &          19 \\
+ ADJ                      &          13 \\
+ NOUN NOUN                &           7 \\
+ NOUN PUNCT ADJ           &           4 \\
+ ADV                      &           3 \\
+ PROPN NOUN               &           2 \\
+ NOUN NUM NOUN            &           2 \\
+ ADJ NOUN NOUN            &           2 \\
+ NOUN SYM NOUN NOUN       &           2 \\
+ NOUN PUNCT VERB          &           2 \\
+ ADV PUNCT NOUN           &           2 \\
+ ADJ NOUN ADJ             &           1 \\
+ CCONJ                    &           1 \\
+ VERB PROPN               &           1 \\
+ ADJ ADJ ADJ              &           1 \\
+ ADJ CCONJ                &           1 \\
+ INTJ                     &           1 \\
+ NOUN NUM PROPN           &           1 \\
+ PUNCT VERB               &           1 \\
+ NOUN PUNCT ADJ NOUN      &           1 \\
+ ADJ ADJ NOUN             &           1 \\
+ NOUN PUNCT NOUN ADJ NOUN &           1 \\
+ PROPN PUNCT              &           1 \\
+ VERB NOUN                &           1 \\
+ ADJ PROPN                &           1 \\
+\hline
+\end{longtable}

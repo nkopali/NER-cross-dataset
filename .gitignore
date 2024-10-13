@@ -1,0 +1,4 @@
+*.safetensors
+*.pt 
+*.bin
+*.vscode

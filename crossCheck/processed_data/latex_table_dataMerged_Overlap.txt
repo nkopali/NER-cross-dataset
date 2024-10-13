@@ -1,0 +1,10 @@
+\begin{longtable}{lr}
+\hline
+ Pattern   &   Frequency \\
+\hline
+\endhead
+ NOUN      &          23 \\
+ ADJ       &           8 \\
+ PROPN     &           6 \\
+\hline
+\end{longtable}
