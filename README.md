@@ -10,11 +10,11 @@ The `datasets` folder contains all datasets required for this project. Ensure yo
 
 On biobert that would be `biobert/datasets` and for kebiolm `kebiolm/ner`.
 
-Ensure you run `biobert/named-entity-recognition/preprocess.sh` before you start training your model.
+Run `biobert/named-entity-recognition/preprocess.sh` before you start training your model.
 
 ### 2. BioBERT
 
-To use BioBERT for NER tasks, first install the required version of `transformers`:
+To use BioBERT first install the required version of `transformers`:
 
 ```bash
 pip install transformers==3.0.0
@@ -30,7 +30,7 @@ python run_ner.py --data_dir ../datasets/NCBI-disease --labels ../datasets/NCBI-
 
 For KeBioLM, first download the pre-trained model from [this link](https://drive.google.com/file/d/1kMbTsc9rPpBc-6ezEHjMbQLljW3SUWG9/edit) and place it in the `kebiolm/ner/model` directory.
 
-To use KebioLM first install the required version of `transformers` and `PyTorch`, and ensure you have Python 3.7 installed:
+To use KebioLM first install the required version of `transformers` and `PyTorch`, and ensure you have Python 3.7 environment installed:
 
 ```bash
 pip install transformers==3.4.0
