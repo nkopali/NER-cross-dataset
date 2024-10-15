@@ -7,7 +7,7 @@ MAX_LENGTH=128
 for ENTITY in $ENTITIES
 do
 	echo "***** " $ENTITY " Preprocessing Start *****"
-	DATA_DIR=../datasets/NER/$ENTITY
+	DATA_DIR=../datasets/$ENTITY
 
 	# Replace tab to space
 	cat $DATA_DIR/train.tsv | tr '\t' ' ' > $DATA_DIR/train.txt.tmp
