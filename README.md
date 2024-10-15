@@ -10,6 +10,8 @@ The `datasets` folder contains all datasets required for this project. Ensure yo
 
 On biobert that would be `biobert/datasets` and for kebiolm `kebiolm/ner`.
 
+Ensure you run `biobert/named-entity-recognition/preprocess.sh` before you start training your model.
+
 ### 2. BioBERT
 
 To use BioBERT for NER tasks, first install the required version of `transformers`:
