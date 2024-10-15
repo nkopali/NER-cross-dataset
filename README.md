@@ -16,7 +16,7 @@ To use BioBERT for NER tasks, first install the required version of `transformer
 pip install transformers==3.0.0
 ```
 
-Then, run the following command to train and evaluate the model using the NCBI-disease dataset:
+Then, run the following command to train and evaluate the model using the NCBI-disease dataset. You can follow the same steps for any other dataset:
 
 ```bash
 python run_ner.py --data_dir ../datasets/NER/NCBI-disease --labels ../datasets/NER/NCBI-disease/labels.txt --model_name_or_path dmis-lab/biobert-base-cased-v1.1 --output_dir output/NCBI-disease --max_seq_length 128 --num_train_epochs 5 --per_device_train_batch_size 32 --save_steps 1000 --seed 1 --do_train --do_eval --do_predict --overwrite_output_dir
@@ -26,12 +26,13 @@ python run_ner.py --data_dir ../datasets/NER/NCBI-disease --labels ../datasets/N
 
 For KeBioLM, first download the pre-trained model from [this link](https://drive.google.com/file/d/1kMbTsc9rPpBc-6ezEHjMbQLljW3SUWG9/edit) and place it in the `kebiolm/ner/model` directory.
 
-Use the following command to train and evaluate KeBioLM on the NCBI-disease dataset:
+Use the following command to train and evaluate KeBioLM on the NCBI-disease dataset. You can follow the same steps for any other dataset:
 
 ```bash
 python run_ner.py --data_dir ./NCBI-disease --model_name_or_path ./model --output_dir ./output/NCBI-disease --num_train_epochs 5 --seed 1 --do_train --do_eval --do_predict --overwrite_output_dir --gradient_accumulation_steps 2 --learning_rate 3e-5 --warmup_steps 1710 --save_steps 1000 --max_seq_length 512 --per_device_train_batch_size 8 --eval_accumulation_steps 1 --load_best_model_at_end --metric_for_best_model f1
 ```
 
+### 4. Python scripts in crossCheck folder
 
 ### 1. `eval_compare.py`
 - **Purpose**: Compares gold-standard and predicted NER tags to identify differences in the filtered datasets, which are then stored in a CSV file.
