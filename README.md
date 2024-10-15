@@ -8,6 +8,8 @@ This repository contains Python scripts for performing data preprocessing, analy
 
 The `datasets` folder contains all datasets required for this project. Ensure you place the necessary data files here before running any models.
 
+On biobert that would be `biobert/datasets` and for kebiolm `kebiolm/ner`.
+
 ### 2. BioBERT
 
 To use BioBERT for NER tasks, first install the required version of `transformers`:
@@ -19,12 +21,19 @@ pip install transformers==3.0.0
 Then, run the following command to train and evaluate the model using the NCBI-disease dataset. You can follow the same steps for any other dataset:
 
 ```bash
-python run_ner.py --data_dir ../datasets/NER/NCBI-disease --labels ../datasets/NER/NCBI-disease/labels.txt --model_name_or_path dmis-lab/biobert-base-cased-v1.1 --output_dir output/NCBI-disease --max_seq_length 128 --num_train_epochs 5 --per_device_train_batch_size 32 --save_steps 1000 --seed 1 --do_train --do_eval --do_predict --overwrite_output_dir
+python run_ner.py --data_dir ../datasets/NCBI-disease --labels ../datasets/NCBI-disease/labels.txt --model_name_or_path dmis-lab/biobert-base-cased-v1.1 --output_dir output/NCBI-disease --max_seq_length 128 --num_train_epochs 5 --per_device_train_batch_size 32 --save_steps 1000 --seed 1 --do_train --do_eval --do_predict --overwrite_output_dir
 ```
 
 ### 3. KeBioLM
 
 For KeBioLM, first download the pre-trained model from [this link](https://drive.google.com/file/d/1kMbTsc9rPpBc-6ezEHjMbQLljW3SUWG9/edit) and place it in the `kebiolm/ner/model` directory.
+
+To use KebioLM first install the required version of `transformers` and `PyTorch`, and ensure you have Python 3.7 installed:
+
+```bash
+pip install transformers==3.4.0
+pip install pytorch==1.7.0
+```
 
 Use the following command to train and evaluate KeBioLM on the NCBI-disease dataset. You can follow the same steps for any other dataset:
 
@@ -57,7 +66,5 @@ python run_ner.py --data_dir ./NCBI-disease --model_name_or_path ./model --outpu
 
 ### 8. `decompose.py`
 - **Purpose**: Converts CSV data into a TSV format suitable for training or evaluation in both NER models.
-
----
 
 Ensure that all dependencies, such as `pandas`, `ast`, `tabulate` and `stanza` are installed before running these scripts.
