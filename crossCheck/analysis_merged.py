@@ -95,10 +95,8 @@ def process(df, name):
     return df
 
 
-# bc5_df = pd.read_csv('processed_data/diff_tags_new_bc5.csv')
-ncbi_df = pd.read_csv('processed_data/diff_tags_new_ncbitobc5.csv')
+bc5_df = pd.read_csv('processed_data/diff_tags_new_ncbitobc5.csv')
 
-# bc5_df = process(bc5_df, "BC5")
-ncbi_df = process(ncbi_df, "NCBI")
-ncbi_df.to_csv("ncbitobc5LatexConsecutive.csv", index=False)
+bc5_df = process(bc5_df, "BC5")
+bc5_df.to_csv("ncbitobc5LatexConsecutive.csv", index=False)
 

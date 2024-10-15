@@ -24,5 +24,5 @@ def generate_latex_table(file_path, indices):
 
     return latex_table
 
-file_path = 'processed_data/ncbitobc5LatexConsecutive.csv'
+file_path = 'processed_data/dataMerged.csv'
 print(generate_latex_table(file_path, [1,2]))

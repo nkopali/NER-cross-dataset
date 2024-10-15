@@ -2,7 +2,36 @@
 
 This repository contains Python scripts for performing data preprocessing, analysis, and evaluation on biomedical Named Entity Recognition (NER) datasets. We used two models for NER tasks, namely BioBERT and KebioLM, and instructions for each model can be found within their respective folders. The scripts focus on tasks such as filtering datasets, generating LaTeX tables, part-of-speech tagging, and comparing evaluation results. Below is an overview of each file in this repository.
 
-## Files Description
+## File Descriptions
+
+### 1. Datasets
+
+The `datasets` folder contains all datasets required for this project. Ensure you place the necessary data files here before running any models.
+
+### 2. BioBERT
+
+To use BioBERT for NER tasks, first install the required version of `transformers`:
+
+```bash
+pip install transformers==3.0.0
+```
+
+Then, run the following command to train and evaluate the model using the NCBI-disease dataset:
+
+```bash
+python run_ner.py --data_dir ../datasets/NER/NCBI-disease --labels ../datasets/NER/NCBI-disease/labels.txt --model_name_or_path dmis-lab/biobert-base-cased-v1.1 --output_dir output/NCBI-disease --max_seq_length 128 --num_train_epochs 5 --per_device_train_batch_size 32 --save_steps 1000 --seed 1 --do_train --do_eval --do_predict --overwrite_output_dir
+```
+
+### 3. KeBioLM
+
+For KeBioLM, first download the pre-trained model from [this link](https://drive.google.com/file/d/1kMbTsc9rPpBc-6ezEHjMbQLljW3SUWG9/edit) and place it in the `kebiolm/ner/model` directory.
+
+Use the following command to train and evaluate KeBioLM on the NCBI-disease dataset:
+
+```bash
+python run_ner.py --data_dir ./NCBI-disease --model_name_or_path ./model --output_dir ./output/NCBI-disease --num_train_epochs 5 --seed 1 --do_train --do_eval --do_predict --overwrite_output_dir --gradient_accumulation_steps 2 --learning_rate 3e-5 --warmup_steps 1710 --save_steps 1000 --max_seq_length 512 --per_device_train_batch_size 8 --eval_accumulation_steps 1 --load_best_model_at_end --metric_for_best_model f1
+```
+
 
 ### 1. `eval_compare.py`
 - **Purpose**: Compares gold-standard and predicted NER tags to identify differences in the filtered datasets, which are then stored in a CSV file.
