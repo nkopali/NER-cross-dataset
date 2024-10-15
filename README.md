@@ -10,7 +10,7 @@ The `datasets` folder contains all datasets required for this project. Ensure yo
 
 On biobert that would be `biobert/datasets` and for kebiolm `kebiolm/ner`.
 
-Run `biobert/named-entity-recognition/preprocess.sh` before you start training your model.
+Run `biobert/named-entity-recognition/preprocess.sh` before you start training the BioBERT model.
 
 ### 2. BioBERT
 
